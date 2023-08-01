@@ -1,12 +1,12 @@
 package com.example.extudoBackEnd.domain.enums;
 
-public enum Prioridade {
+public enum Priority {
     LOW(0, "LOW"),
     AVERAGE(1, "AVERAGE"),
     HIGH(2, "HIGH");
     private Integer code;
     private String description;
-    Prioridade(Integer code, String description) {
+    Priority(Integer code, String description) {
         this.code = code;
         this.description = description;
     }
@@ -16,9 +16,9 @@ public enum Prioridade {
     public String getDescription() {
         return description;
     }
-    public static Prioridade toEnum(Integer code) {
+    public static Priority toEnum(Integer code) {
         if(code == null) return null;
-        for (Prioridade value : Prioridade.values()) {
+        for (Priority value : Priority.values()) {
             if(code.equals(value.getCode())) {
                 return value;
             }
